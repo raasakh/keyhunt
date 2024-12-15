@@ -15,7 +15,7 @@ Work for Ethereum
 # TL:DR
 
 - Download and build
-- Run against puzzle 66 (address mode)
+- Run against puzzle 67 (address mode)
 
 ```
 ./keyhunt -m address -f tests/66.txt -b 66 -l compress -R -q -s 10
@@ -82,7 +82,7 @@ apt install libgmp-dev -y
 To clone the repository
 
 ```
-git clone https://github.com/albertobsd/keyhunt.git
+git clone https://github.com/raasakh/keyhunt.git
 ```
 
 don't forget change to the keyhunt directory (But i'm not here to teach you linux commands)
@@ -182,7 +182,7 @@ In this mode you can specify to seach only address compressed or uncompressed wi
 Test your luck with the random parameter `-R` againts the puzzle #66
 
 ```
-./keyhunt -m address -f tests/66.txt -b 66 -l compress -R -q -s 10
+./keyhunt -m address -f tests/67.txt -b 67 -l compress -R -q -s 10
 ```
 
 Please note the change from `-r 1:FFFFFFFF` to `-b 66`, with -b you can specify the bit range
@@ -209,13 +209,14 @@ output:
 
 ### vanity search.
 
-To search only one vanity address is with `1Good1` or with `1MyKey` use the next command
+To search only one vanity address is with `1BY8GQb` or with `1MyKey` use the next command
 
 full command
 
 ```
-./keyhunt -m vanity -l compress -R -b 256 -v 1Good1 -v 1MyKey
+./keyhunt -m vanity -l compress -t 1 -R -b 67 -v 1BY8GQb -v 1MyKey
 ```
+
 
 output:
 
@@ -321,7 +322,7 @@ test your luck with the next file for the puzzle #66
 
 
 ```
-./keyhunt -m rmd160 -f tests/66.rmd -b 66 -l compress -R -q
+./keyhunt -m rmd160 -f tests/67.rmd -b 67 -l compress -R -q
 ```
 
 Output:
@@ -352,7 +353,7 @@ The speed for this method is better than the speed for address or rmd160
 
 The input file can had one publickey per line compress or uncompress:
 
-- Publickey Compress (66 hexcharacters)
+- Publickey Compress (67 hexcharacters)
 - Publickey Uncompress (130 hexcharacters)
 
 Example input file:
