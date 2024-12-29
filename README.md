@@ -179,13 +179,13 @@ rmd160 5dedfbf9ea599dd4e3ca6a80b333c472fd0b3f69
 
 In this mode you can specify to seach only address compressed or uncompressed with `-l compress` or  `-l uncompress`
 
-Test your luck with the random parameter `-R` againts the puzzle #66
+Test your luck with the random parameter `-R` againts the puzzle #67
 
 ```
 ./keyhunt -m address -f tests/67.txt -b 67 -l compress -R -q -s 10
 ```
 
-Please note the change from `-r 1:FFFFFFFF` to `-b 66`, with -b you can specify the bit range
+Please note the change from `-r 1:FFFFFFFF` to `-b 67`, with -b you can specify the bit range
 
 output:
 ```
@@ -197,9 +197,9 @@ output:
 [+] Stats output every 10 seconds
 [+] Setting search for btc adddress
 [+] N = 0x100000000
-[+] Bit Range 66
-[+] -- from : 0x20000000000000000
-[+] -- to   : 0x40000000000000000
+[+] Bit Range 67
+[+] -- from : 0x40000000000000000
+[+] -- to   : 0x80000000000000000
 [+] Allocating memory for 1 elements: 0.00 MB
 [+] Bloom filter for 1 elements.
 [+] Loading data to the bloomfilter total: 0.03 MB
@@ -225,7 +225,7 @@ output:
 [+] Mode vanity
 [+] Search compress only
 [+] Random mode
-[+] Added Vanity search : 1Good1
+[+] Added Vanity search : 1BY8GQb
 [+] Added Vanity search : 1MyKey
 [+] N = 0x100000000
 [+] Bit Range 256
@@ -318,7 +318,7 @@ rmd160 7dd65592d0ab2fe0d0257d571abf032cd9db93dc
 (Output omitted)
 ```
 
-test your luck with the next file for the puzzle #66
+test your luck with the next file for the puzzle #67
 
 
 ```
@@ -335,9 +335,9 @@ Output:
 [+] Quiet thread output
 [+] Stats output every 5 seconds
 [+] N = 0x100000000
-[+] Bit Range 66
-[+] -- from : 0x20000000000000000
-[+] -- to   : 0x40000000000000000
+[+] Bit Range 67
+[+] -- from : 0x40000000000000000
+[+] -- to   : 0x80000000000000000
 [+] Allocating memory for 1 elements: 0.00 MB
 [+] Bloom filter for 1 elements.
 [+] Loading data to the bloomfilter total: 0.03 MB
