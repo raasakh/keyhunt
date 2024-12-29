@@ -24,10 +24,10 @@ Work for Ethereum
 
 You need to add `-t numberThreads` to get better speed
 
-- Run against Puzzle 125 (bsgs mode)
+- Run against Puzzle 160 (bsgs mode)
 
 ```
-./keyhunt -m bsgs -f tests/125.txt -b 125 -q -s 10 -R
+./keyhunt -m bsgs -f tests/160.txt -b 160 -q -s 10 -R
 ```
 
 You need to add `-t numberThreads` and `-k factor` to get better speed
@@ -408,9 +408,9 @@ The Operation is `800258a2ce` hex (+/-) in this case + `453856235784` decimal eq
 
 This is an easy example, I been trying the puzzle 120 with more than 500 millions of substracted keys and no luck.
 
-Test you luck with the puzzle 120 with xpoint:
+Test you luck with the puzzle 160 with xpoint:
 
-```./keyhunt -m xpoint -f tests/120.txt -t 4 -b 125 -R -q```
+```./keyhunt -m xpoint -f tests/bsgs160.txt -t 4 -b 160 -R -q```
 
 Output:
 
@@ -421,7 +421,7 @@ Output:
 [+] Random mode
 [+] Quiet thread output
 [+] N = 0x100000000
-[+] Bit Range 125
+[+] Bit Range 160
 [+] -- from : 0x10000000000000000000000000000000
 [+] -- to   : 0x20000000000000000000000000000000
 [+] Allocating memory for 1 elements: 0.00 MB
@@ -704,17 +704,17 @@ user    0m3.619s
 sys     0m0.000s
 ```
 
-Test the puzzle 120 with the next publickey:
+Test the puzzle bsgs160 with the next publickey:
 
 ```
-0233709eb11e0d4439a729f21c2c443dedb727528229713f0065721ba8fa46f00e
+02e0a8b039282faf6fe0fd769cfbc4b6b4cf8758ba68220eac420e32b91ddfa673
 ```
 
 Line of execution in random mode `-R` or -B random
 
-```./keyhunt -m bsgs -f tests/125.txt -b 125 -q -s 10 -R```
+```./keyhunt -m bsgs -f tests/160.txt -b 160 -q -s 10 -R```
 
-```./keyhunt -m bsgs -f tests/125.txt -b 125 -q -s 10 -B random```
+```./keyhunt -m bsgs -f tests/160.txt -b 160 -q -s 10 -B random```
 
 
 Example Output:
@@ -727,7 +727,7 @@ Example Output:
 [+] Mode BSGS random
 [+] Opening file tests/125.txt
 [+] Added 1 points from file
-[+] Bit Range 125
+[+] Bit Range 160
 [+] -- from : 0x10000000000000000000000000000000
 [+] -- to   : 0x20000000000000000000000000000000
 [+] N = 0x100000000000
@@ -749,13 +749,13 @@ We can speed up our process selecting a bigger K value `-k value` btw the n valu
 
 Example:
 ```
-./keyhunt -m bsgs -f tests/125.txt -b 125 -R -k 20 -S
+./keyhunt -m bsgs -f tests/160.txt -b 160 -R -k 20 -S
 ```
 
 Output:
 
 ```
-./keyhunt -m bsgs -f tests/125.txt -b 125 -R -k 20 -S
+./keyhunt -m bsgs -f tests/160.txt -b 160 -R -k 20 -S
 [+] Version 0.2.230430 Satoshi Quest, developed by AlbertoBSD
 [+] Random mode
 [+] K factor 20
@@ -788,7 +788,7 @@ if you want to more Speed use a bigger -k value like 128, it will use some 2 GB 
 
 
 ```
-./keyhunt -m bsgs -f tests/125.txt -b 125 -R -k 128 -S
+./keyhunt -m bsgs -f tests/160.txt -b 160 -R -k 128 -S
 ```
 
 Output
@@ -800,7 +800,7 @@ Output
 [+] Mode BSGS random
 [+] Opening file tests/125.txt
 [+] Added 1 points from file
-[+] Bit Range 125
+[+] Bit Range 160
 [+] -- from : 0x10000000000000000000000000000000
 [+] -- to   : 0x20000000000000000000000000000000
 [+] N = 0x100000000000
@@ -823,7 +823,7 @@ I already tested it with some **8 GB ** used with `-k 512` and I get **~46 Petak
 
 with **8** threads
 
-`./keyhunt -m bsgs -f tests/125.txt -b 125 -R -k 512 -q -t 8 -s 10 -S`
+`./keyhunt -m bsgs -f tests/160.txt -b 160 -R -k 512 -q -t 8 -s 10 -S`
 
 Output:
 
@@ -837,7 +837,7 @@ Output:
 [+] Mode BSGS random
 [+] Opening file tests/125.txt
 [+] Added 1 points from file
-[+] Bit Range 125
+[+] Bit Range 160
 [+] -- from : 0x10000000000000000000000000000000
 [+] -- to   : 0x20000000000000000000000000000000
 [+] N = 0x100000000000
